@@ -1,0 +1,31 @@
+name: Deploy user site redirect
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'user-site/**'
+      - '.github/workflows/deploy-user-site.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy redirect to gamer805.github.io
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          personal_token: ${{ secrets.USER_SITE_DEPLOY_TOKEN }}
+          external_repository: gamer805/gamer805.github.io
+          publish_dir: ./user-site
+          publish_branch: main
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: 'Deploy portfolio redirect'

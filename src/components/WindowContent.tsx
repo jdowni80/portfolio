@@ -123,7 +123,7 @@ export const WorkContent = () => {
       "software-keyframes/spokenmind/my-journal.png",
       "software-keyframes/spokenmind/social-circle.png"
     ],
-    "Routerooster": [
+    "RouteRooster": [
       "software-keyframes/routerooster/routerooster-landing-page.png",
       "software-keyframes/routerooster/routerooster-dashboard.png",
       "software-keyframes/routerooster/routerooster-schedule.png"
@@ -156,7 +156,7 @@ export const WorkContent = () => {
       ]
     },
     {
-      name: "Routerooster",
+      name: "RouteRooster",
       url: "https://routerooster.com",
       description: "A full-stack scheduling SaaS for mobile service businesses with zip-aware booking, automated client SMS, subscription billing, and geospatial slot optimization.",
       contributions: [
@@ -334,7 +334,7 @@ export const FAQContent = () => {
     },
     {
       question: "What projects have you worked on?",
-      answer: "I've built Routerooster, a full-stack scheduling SaaS for mobile service businesses, co-developed SpokenMind, a conversation-based reflection and habits app, and served as Technical Architect for DiagnosAI, a generative AI tool for clinicians. I've also worked on MyGPT, a fully local multimodal RAG pipeline for biomedical literature."
+      answer: "I've built RouteRooster, a full-stack scheduling SaaS for mobile service businesses, co-developed SpokenMind, a conversation-based reflection and habits app, and served as Technical Architect for DiagnosAI, a generative AI tool for clinicians. I've also worked on MyGPT, a fully local multimodal RAG pipeline for biomedical literature."
     }
   ]
 
