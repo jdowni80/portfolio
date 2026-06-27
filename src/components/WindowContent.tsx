@@ -123,6 +123,11 @@ export const WorkContent = () => {
       "software-keyframes/spokenmind/my-journal.png",
       "software-keyframes/spokenmind/social-circle.png"
     ],
+    "Routerooster": [
+      "software-keyframes/routerooster/routerooster-landing-page.png",
+      "software-keyframes/routerooster/routerooster-dashboard.png",
+      "software-keyframes/routerooster/routerooster-schedule.png"
+    ],
     "Wiillow": [
       "software-keyframes/wiillow/costume-page.png",
       "software-keyframes/wiillow/game-page.png",
@@ -140,6 +145,7 @@ export const WorkContent = () => {
   const softwareProjects = [
     {
       name: "SpokenMind",
+      url: "https://spokenmind-desktop.vercel.app",
       description: "A conversation-based reflection and habits app designed to improve users' mental wellness and productivity through AI-integrated analysis, automated task management, and social accountability.",
       contributions: [
         "Co-developed the core application architecture and features",
@@ -147,6 +153,18 @@ export const WorkContent = () => {
         "Built automated task management system",
         "Developed social accountability features to help users maintain habits",
         "Created the conversation interface for reflection and mental wellness tracking"
+      ]
+    },
+    {
+      name: "Routerooster",
+      url: "https://routerooster.com",
+      description: "A full-stack scheduling SaaS for mobile service businesses with zip-aware booking, automated client SMS, subscription billing, and geospatial slot optimization.",
+      contributions: [
+        "Built the full-stack application with Next.js, Supabase, Twilio, and Stripe",
+        "Implemented zip-aware booking, automated client SMS, and subscription billing",
+        "Designed geospatial slot availability using Google Maps APIs and a custom scheduling engine to minimize drive time between jobs",
+        "Integrated server actions, webhooks, and cron jobs for automated workflows",
+        "Hardened production deployment with rate limiting, CAPTCHA, and MFA"
       ]
     },
     {
@@ -226,7 +244,20 @@ export const WorkContent = () => {
             
             return (
               <div key={idx} className="bg-gray-800/30 rounded-lg p-4 border border-gray-700">
-                <h3 className="text-lg font-semibold text-accent mb-2">{project.name}</h3>
+                <h3 className="text-lg font-semibold text-accent mb-2">
+                  {'url' in project && project.url ? (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      {project.name}
+                    </a>
+                  ) : (
+                    project.name
+                  )}
+                </h3>
                 <p className="text-gray-300 text-sm mb-3">{project.description}</p>
                 {imagePaths.length > 0 && (
                   <ImageCarousel images={imagePaths} projectName={project.name} />
@@ -287,7 +318,7 @@ export const FAQContent = () => {
     },
     {
       question: "What kind of work are you looking for?",
-      answer: "I'm seeking a summer 2026 internship focused on the applications and deployment of large language models in terms of software, hardware, or law."
+      answer: "I'm seeking to apply computational experience in a full time new grad computer engineering or software role."
     },
     {
       question: "What programming languages do you know?",
@@ -303,7 +334,7 @@ export const FAQContent = () => {
     },
     {
       question: "What projects have you worked on?",
-      answer: "I've co-developed SpokenMind, a conversation-based reflection and habits app, and served as Technical Architect for DiagnosAI, a generative AI tool for clinicians. I've also worked on MyGPT, a fully local multimodal RAG pipeline for biomedical literature."
+      answer: "I've built Routerooster, a full-stack scheduling SaaS for mobile service businesses, co-developed SpokenMind, a conversation-based reflection and habits app, and served as Technical Architect for DiagnosAI, a generative AI tool for clinicians. I've also worked on MyGPT, a fully local multimodal RAG pipeline for biomedical literature."
     }
   ]
 
