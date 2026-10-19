@@ -301,7 +301,7 @@ export const WorkContent = () => {
         </h2>
         <div className="bg-gray-800/30 rounded-lg p-4 border border-gray-700 mb-4">
           <p className="text-gray-300 text-sm leading-relaxed mb-2">
-            I create video content including game development tutorials, project showcases, and creative content. Check out my <a href="https://www.youtube.com/@RinkyDinkGamer" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">YouTube channel</a> for the latest videos.
+            I create video content where I play games like GeoGuessr, Chess, and Balatro. Check out my <a href="https://www.youtube.com/@RinkyDinkGamer" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">YouTube channel</a> for the latest videos.
           </p>
         </div>
         <YouTubeVideos />
