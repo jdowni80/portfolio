@@ -71,6 +71,15 @@ const Games = () => {
       slug: 'ghostly-melee',
       imageUrl: 'https://img.itch.zone/aW1nLzg3NzY1OTgucG5n/315x250%23c/nGaCn%2F.png',
       description: "A 2D platformer I made in 2022 for the Weekly Game Jam - Week 250."
+    },
+    {
+      id: 'over-par',
+      title: 'Over Par',
+      embedId: '5192141',
+      url: 'https://fancy-dog-games.itch.io/over-par',
+      slug: 'over-par',
+      imageUrl: 'https://img.itch.zone/aW1nLzMxMDk5MDA2LnBuZw==/315x250%23c/lCxkJo.png',
+      description: "A slingshot golf roguelike I made in Löve, a Lua-based cross-platform game development framework."
     }
   ];
 
